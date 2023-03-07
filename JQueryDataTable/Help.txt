@@ -1,0 +1,32 @@
+source code at
+https://codewithmukesh.com/blog/jquery-datatable-in-aspnet-core/?fbclid=IwAR3QpJtXMtSfGSi4RIm53jGg_9MuzFWuisFJQCv-C2nLbK-YM19jGxTT9IE
+
+to created project with .net core 3.1
+
+install
+--
+aspnetcore-runtime-3.1.32-win-x64.exe
+dotnet-sdk-3.1.426-win-x64.exe
+dotnet-hosting-3.1.32-win.exe
+
+build project after create then install packages from Package Manager
+--
+NuGet\Install-Package Microsoft.EntityFrameworkCore -Version 3.1.32
+NuGet\Install-Package Microsoft.EntityFrameworkCore.Tools -Version 3.1.32
+NuGet\Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 3.1.32
+NuGet\Install-Package Microsoft.EntityFrameworkCore.Design -Version 3.1.32
+NuGet\Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design -Version 3.1.5
+NuGet\Install-Package System.Linq.Dynamic.Core
+
+for migration use
+add-migration InitialCreate
+update-database  if error ocurs try add trused at connection string
+"Server=.;Database=JQueryDatatable;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+
+---
+for dummy data insertion use this site
+https://www.mockaroo.com/
+
+
+--
+add at lib right clcik add client side library then write datatables
